@@ -49,22 +49,29 @@ We also have a biweekly community call, details of which are announced on the ma
 
 If you are new to contributing to open source, this guide helps explain why, what, and how to successfully get involved. """
 
-text = readme.split("\n")
+'''text = readme.split("\n")
 lista =list()
 for u in text:
     if("http"in u or "https" in u):
         lista.append(u)
-print(lista)
+print(lista)'''
 
 from collections import Counter
-c = Counter()
-print("primer printn")
-print(c)
-c = Counter("holaaa") 
-print(c)
-c = Counter(readme)
-print(c)
-c = Counter(readme.split())
-print(c)
+from typing import Text
+texto = readme.lower().split()#transformo mi readme en un texto separado por palabras
+c = Counter(texto)#creo un conter de texto
 
-aux = c.most_common()[0],n
+aux=c.most_common()[0]#me guardo con la funcion most_common el primer dato de la lista con mayor repeticiones
+print(c.most_common()[0])
+
+caracter="T"
+print(readme.split()[0])
+print(readme.split()[0].startswith(caracter))# con la funcion starswich() me devulve un boolean si concide el primer caracter
+
+
+caracter = "t"
+print(readme.lower().split()[0].startswith(caracter))# evalua indistintamente  si es mayuscula o minuscula
+
+import string
+caracter = "?"
+print(f"El caracter es una letra {caracter in string.ascii_letters}")
