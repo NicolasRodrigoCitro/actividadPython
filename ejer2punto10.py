@@ -9,7 +9,9 @@ listaEval1 = list(map(int,unEval1))
 
 unEval2 =[x.replace(',','').replace('\n','').replace("'","").strip() for x in evaluacion2.readlines()]
 listaEval2 = list(map(int,unEval2))
-
+nombres.close()
+evaluacion1.close()
+evaluacion2.close()
 def suma_de_numeros(unNumero1,unNumero2):
     return int(unNumero1+unNumero2)
 alumnos={}
